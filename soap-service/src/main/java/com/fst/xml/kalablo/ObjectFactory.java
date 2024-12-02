@@ -2,7 +2,7 @@
 // Ce fichier a été généré par Eclipse Implementation of JAXB, v3.0.0 
 // Voir https://eclipse-ee4j.github.io/jaxb-ri 
 // Toute modification apportée à ce fichier sera perdue lors de la recompilation du schéma source. 
-// Généré le : 2024.12.01 à 07:30:46 AM GMT 
+// Généré le : 2024.12.01 à 09:55:51 PM GMT 
 //
 
 
@@ -32,6 +32,7 @@ import jakarta.xml.bind.annotation.XmlRegistry;
 public class ObjectFactory {
 
     private final static QName _EtudiantListRequest_QNAME = new QName("http://www.fst.com/xml/kalablo", "EtudiantListRequest");
+    private final static QName _InscriptionListRequest_QNAME = new QName("http://www.fst.com/xml/kalablo", "InscriptionListRequest");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: com.fst.xml.kalablo
@@ -73,6 +74,46 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link InscriptionRequest }
+     * 
+     */
+    public InscriptionRequest createInscriptionRequest() {
+        return new InscriptionRequest();
+    }
+
+    /**
+     * Create an instance of {@link InscriptionResponse }
+     * 
+     */
+    public InscriptionResponse createInscriptionResponse() {
+        return new InscriptionResponse();
+    }
+
+    /**
+     * Create an instance of {@link Inscription }
+     * 
+     */
+    public Inscription createInscription() {
+        return new Inscription();
+    }
+
+    /**
+     * Create an instance of {@link InscriptionListResponse }
+     * 
+     */
+    public InscriptionListResponse createInscriptionListResponse() {
+        return new InscriptionListResponse();
+    }
+
+    /**
+     * Create an instance of {@link Matiere }
+     * 
+     */
+    public Matiere createMatiere() {
+        return new Matiere();
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link Object }{@code >}
      * 
      * @param value
@@ -83,6 +124,19 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://www.fst.com/xml/kalablo", name = "EtudiantListRequest")
     public JAXBElement<Object> createEtudiantListRequest(Object value) {
         return new JAXBElement<Object>(_EtudiantListRequest_QNAME, Object.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Object }{@code >}
+     * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link Object }{@code >}
+     */
+    @XmlElementDecl(namespace = "http://www.fst.com/xml/kalablo", name = "InscriptionListRequest")
+    public JAXBElement<Object> createInscriptionListRequest(Object value) {
+        return new JAXBElement<Object>(_InscriptionListRequest_QNAME, Object.class, null, value);
     }
 
 }

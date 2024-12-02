@@ -7,7 +7,7 @@ import jakarta.annotation.PostConstruct;
 import org.springframework.stereotype.Component;
 import org.springframework.util.Assert;
 
-import com.fst.soap_service.model.Etudiant;
+import com.fst.xml.kalablo.Etudiant;
 
 @Component
 public class EtudiantRepository {

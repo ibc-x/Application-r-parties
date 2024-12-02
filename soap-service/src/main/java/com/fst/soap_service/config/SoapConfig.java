@@ -30,12 +30,13 @@ public class SoapConfig extends WsConfigurerAdapter {
     wsdl11Definition.setPortTypeName("EtudiantPort");
     wsdl11Definition.setLocationUri("/kalablo/etudiants");
     wsdl11Definition.setTargetNamespace("http://www.fst.com/xml/kalablo");
+    
     wsdl11Definition.setSchema(etudiantSchema);
     return wsdl11Definition;
   }
 
   @Bean
   public XsdSchema etudiantSchema() {
-    return new SimpleXsdSchema(new ClassPathResource("etudiant.xsd"));
+    return new SimpleXsdSchema(new ClassPathResource("main.xsd"));
   }
 }

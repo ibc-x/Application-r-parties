@@ -1,32 +1,6 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.fst.com/xml/kalablo"
            targetNamespace="http://www.fst.com/xml/kalablo" elementFormDefault="qualified">
 
-  <xs:element name="EtudiantRequest">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element name="code" type="xs:string"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-
-  <xs:element name="EtudiantResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element name="Etudiant" type="tns:Etudiant"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-
-  <xs:element name="EtudiantListRequest"/>
-
-
-  <xs:element name="EtudiantListResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element name="Etudiants" maxOccurs="unbounded" type="tns:Etudiant"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
 
   <xs:complexType name="Etudiant">
     <xs:sequence>

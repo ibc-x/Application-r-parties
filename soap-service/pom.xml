@@ -73,7 +73,7 @@
 				</executions>
 				<configuration>
 				<sources>
-					<source>src/main/resources/etudiant.xsd</source>
+					<source>src/main/resources/main.xsd</source>
 				</sources>
 				<outputDirectory>src/main/java</outputDirectory>
 				<clearOutputDir>false</clearOutputDir>

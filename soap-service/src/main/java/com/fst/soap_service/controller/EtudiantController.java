@@ -1,10 +1,9 @@
 package com.fst.soap_service.controller;
 
-import com.fst.soap_service.dto.EtudiantListResponse;
-import com.fst.soap_service.dto.EtudiantRequest;
-import com.fst.soap_service.dto.EtudiantResponse;
-import com.fst.soap_service.model.Etudiant;
 import com.fst.soap_service.repository.EtudiantRepository;
+import com.fst.xml.kalablo.EtudiantListResponse;
+import com.fst.xml.kalablo.EtudiantRequest;
+import com.fst.xml.kalablo.EtudiantResponse;
 
 import java.util.Arrays;
 import java.util.List;
@@ -37,7 +36,7 @@ public class EtudiantController
   @ResponsePayload
   public EtudiantListResponse getEtudiants() {
       EtudiantListResponse response = new EtudiantListResponse();
-      response.setEtudiants(this.etudiantRepository.getAll());
+      response.getEtudiants().addAll(this.etudiantRepository.getAll());
       return response;
   }
 }

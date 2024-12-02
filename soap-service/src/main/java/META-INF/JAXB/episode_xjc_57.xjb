@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bindings version="3.0" xmlns="https://jakarta.ee/xml/ns/jaxb">
+  <!--
+
+Ce fichier a été généré par Eclipse Implementation of JAXB, v3.0.0 
+Voir https://eclipse-ee4j.github.io/jaxb-ri 
+Toute modification apportée à ce fichier sera perdue lors de la recompilation du schéma source. 
+Généré le : 2024.12.01 à 08:03:14 PM GMT 
+
+  -->
+  <bindings scd="x-schema::tns" xmlns:tns="http://www.fst.com/xml/kalablo">
+    <schemaBindings map="false">
+      <package name="com.fst.xml.kalablo"/>
+    </schemaBindings>
+    <bindings scd="tns:EtudiantRequest">
+      <class ref="com.fst.xml.kalablo.EtudiantRequest"/>
+    </bindings>
+    <bindings scd="tns:EtudiantResponse">
+      <class ref="com.fst.xml.kalablo.EtudiantResponse"/>
+    </bindings>
+    <bindings scd="~tns:Etudiant">
+      <class ref="com.fst.xml.kalablo.Etudiant"/>
+    </bindings>
+    <bindings scd="tns:EtudiantListResponse">
+      <class ref="com.fst.xml.kalablo.EtudiantListResponse"/>
+    </bindings>
+    <bindings scd="tns:InscriptionRequest">
+      <class ref="com.fst.xml.kalablo.InscriptionRequest"/>
+    </bindings>
+    <bindings scd="tns:InscriptionResponse">
+      <class ref="com.fst.xml.kalablo.InscriptionResponse"/>
+    </bindings>
+    <bindings scd="~tns:Inscription">
+      <class ref="com.fst.xml.kalablo.Inscription"/>
+    </bindings>
+    <bindings scd="~tns:Matiere">
+      <class ref="com.fst.xml.kalablo.Matiere"/>
+    </bindings>
+  </bindings>
+</bindings>
+

@@ -1,15 +1,14 @@
 
 package com.fst.soap_service.model;
 
+
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 
 
@@ -22,8 +21,6 @@ import lombok.Setter;
     "adresse"
 })
 @Data
-@Getter
-@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 public class Etudiant {
@@ -36,6 +33,12 @@ public class Etudiant {
     protected String nom;
     @XmlElement(required = true)
     protected String adresse;
+
+    //  @XmlElement(name = "inscription", namespace = "http://www.fst.com/xml/kalablo")
+    // private Inscription inscription;
+
+    // @XmlElement(name = "matiere", namespace = "http://www.fst.com/xml/kalablo")
+    // private Matiere matiere;
 
 
 }

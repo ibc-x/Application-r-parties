@@ -4,7 +4,7 @@
 
     {{ baseURL }}/kalablo/etudiant-wsdl.wsdl
 
-En utilisant avec la méthode GET, vous verez la schema XML
+En utilisant avec la méthode GET, vous verez la schema XML,
 
 # Lister les etudiants methode [POST]
     <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sch="http://www.fst.com/xml/kalablo">
@@ -23,5 +23,17 @@ En utilisant avec la méthode GET, vous verez la schema XML
         </sch:EtudiantRequest>
         </soapenv:Body>
     </soapenv:Envelope>
+
+# Inscription par id, exemple de id : 1, methode [POST]
+    <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sch="http://www.fst.com/xml/kalablo">
+    <soapenv:Header/>
+    <soapenv:Body>
+    <sch:InscriptionRequest>
+        <sch:id>1</sch:id>
+    </sch:InscriptionRequest>
+    </soapenv:Body>
+</soapenv:Envelope>
+
+
 
 
