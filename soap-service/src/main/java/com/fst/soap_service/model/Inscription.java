@@ -15,7 +15,8 @@ import lombok.Setter;
     "idEtudiant",
     "dateInscription",
     "niveau",
-    "status"
+    "status",
+    "annee"
 })
 @Data
 @Getter
@@ -32,4 +33,6 @@ public class Inscription {
     protected String niveau;
     @XmlElement(required = true)
     protected String status;
+    @XmlElement(required = true)
+    protected int annee;
 }

@@ -25,7 +25,7 @@ import jakarta.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="Etudiant" type="{http://www.fst.com/xml/kalablo}Etudiant"/&gt;
+ *         &lt;element name="Matiere" type="{http://www.fst.com/xml/kalablo}Matiere"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -36,36 +36,36 @@ import jakarta.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "etudiant"
+    "matiere"
 })
-@XmlRootElement(name = "EtudiantResponse")
-public class EtudiantResponse {
+@XmlRootElement(name = "MatiereResponse")
+public class MatiereResponse {
 
-    @XmlElement(name = "Etudiant", required = true)
-    protected Etudiant etudiant;
+    @XmlElement(name = "Matiere", required = true)
+    protected Matiere matiere;
 
     /**
-     * Obtient la valeur de la propriété etudiant.
+     * Obtient la valeur de la propriété matiere.
      * 
      * @return
      *     possible object is
-     *     {@link Etudiant }
+     *     {@link Matiere }
      *     
      */
-    public Etudiant getEtudiant() {
-        return etudiant;
+    public Matiere getMatiere() {
+        return matiere;
     }
 
     /**
-     * Définit la valeur de la propriété etudiant.
+     * Définit la valeur de la propriété matiere.
      * 
      * @param value
      *     allowed object is
-     *     {@link Etudiant }
+     *     {@link Matiere }
      *     
      */
-    public void setEtudiant(Etudiant value) {
-        this.etudiant = value;
+    public void setMatiere(Matiere value) {
+        this.matiere = value;
     }
 
 }

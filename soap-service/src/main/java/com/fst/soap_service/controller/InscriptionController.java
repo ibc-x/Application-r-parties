@@ -1,6 +1,7 @@
 package com.fst.soap_service.controller;
 
 import com.fst.soap_service.repository.InscriptionRepository;
+import com.fst.xml.kalablo.InscriptionEtudiantRequest;
 import com.fst.xml.kalablo.InscriptionListResponse;
 import com.fst.xml.kalablo.InscriptionRequest;
 import com.fst.xml.kalablo.InscriptionResponse;
@@ -33,6 +34,14 @@ public class InscriptionController {
     public InscriptionListResponse getInscriptions() {
         InscriptionListResponse response = new InscriptionListResponse();
         response.getInscription().addAll(this.inscriptionRepository.getAll());
+        return response;
+    }
+
+    @PayloadRoot(namespace = NAMESPACE_URI, localPart = "InscriptionEtudiantRequest")
+    @ResponsePayload
+    public InscriptionListResponse getInscriptions(@RequestPayload InscriptionEtudiantRequest request) {
+        InscriptionListResponse response = new InscriptionListResponse();
+        response.getInscription().addAll(this.inscriptionRepository.getAllByEtudiant(request.getIdEtudiant()));
         return response;
     }
 }

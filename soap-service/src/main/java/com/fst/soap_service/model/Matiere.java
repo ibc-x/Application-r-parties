@@ -14,9 +14,8 @@ import lombok.Setter;
 @XmlType(name = "Matiere", propOrder = {
     "id",
     "code",
-    "prenom",
     "nom",
-    "adresse"
+    "coefficient",
 })
 @Data
 @Getter

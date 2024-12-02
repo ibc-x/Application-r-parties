@@ -2,7 +2,7 @@
 // Ce fichier a été généré par Eclipse Implementation of JAXB, v3.0.0 
 // Voir https://eclipse-ee4j.github.io/jaxb-ri 
 // Toute modification apportée à ce fichier sera perdue lors de la recompilation du schéma source. 
-// Généré le : 2024.12.01 à 09:55:51 PM GMT 
+// Généré le : 2024.12.02 à 10:17:23 AM GMT 
 //
 
 
@@ -31,6 +31,7 @@ import jakarta.xml.bind.annotation.XmlType;
  *         &lt;element name="dateInscription" type="{http://www.w3.org/2001/XMLSchema}date"/&gt;
  *         &lt;element name="niveau" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
  *         &lt;element name="status" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *         &lt;element name="annee" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -45,7 +46,8 @@ import jakarta.xml.bind.annotation.XmlType;
     "idEtudiant",
     "dateInscription",
     "niveau",
-    "status"
+    "status",
+    "annee"
 })
 public class Inscription {
 
@@ -58,6 +60,7 @@ public class Inscription {
     protected String niveau;
     @XmlElement(required = true)
     protected String status;
+    protected int annee;
 
     /**
      * Obtient la valeur de la propriété id.
@@ -161,6 +164,22 @@ public class Inscription {
      */
     public void setStatus(String value) {
         this.status = value;
+    }
+
+    /**
+     * Obtient la valeur de la propriété annee.
+     * 
+     */
+    public int getAnnee() {
+        return annee;
+    }
+
+    /**
+     * Définit la valeur de la propriété annee.
+     * 
+     */
+    public void setAnnee(int value) {
+        this.annee = value;
     }
 
 }

@@ -44,6 +44,14 @@
     </xs:complexType>
   </xs:element>
 
+  <xs:element name="InscriptionEtudiantRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="idEtudiant" type="xs:int"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
   <xs:element name="InscriptionResponse">
     <xs:complexType>
       <xs:sequence>
@@ -56,6 +64,41 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element name="Inscription" maxOccurs="unbounded" type="tns:Inscription"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="InscriptionEtudiantListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Inscription" maxOccurs="unbounded" type="tns:Inscription"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="MatiereRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="code" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="MatiereResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Matiere" type="tns:Matiere"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="MatiereListRequest"/>
+
+
+  <xs:element name="MatiereListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Matieres" maxOccurs="unbounded" type="tns:Matiere"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>

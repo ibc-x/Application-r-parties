@@ -40,8 +40,8 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlType(name = "", propOrder = {
     "inscription"
 })
-@XmlRootElement(name = "InscriptionListResponse")
-public class InscriptionListResponse {
+@XmlRootElement(name = "InscriptionEtudiantListResponse")
+public class InscriptionEtudiantListResponse {
 
     @XmlElement(name = "Inscription", required = true)
     protected List<Inscription> inscription;

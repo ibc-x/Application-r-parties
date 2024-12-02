@@ -27,7 +27,7 @@ import jakarta.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="Inscription" type="{http://www.fst.com/xml/kalablo}Inscription" maxOccurs="unbounded"/&gt;
+ *         &lt;element name="Matieres" type="{http://www.fst.com/xml/kalablo}Matiere" maxOccurs="unbounded"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -38,41 +38,41 @@ import jakarta.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "inscription"
+    "matieres"
 })
-@XmlRootElement(name = "InscriptionListResponse")
-public class InscriptionListResponse {
+@XmlRootElement(name = "MatiereListResponse")
+public class MatiereListResponse {
 
-    @XmlElement(name = "Inscription", required = true)
-    protected List<Inscription> inscription;
+    @XmlElement(name = "Matieres", required = true)
+    protected List<Matiere> matieres;
 
     /**
-     * Gets the value of the inscription property.
+     * Gets the value of the matieres property.
      * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a <CODE>set</CODE> method for the inscription property.
+     * This is why there is not a <CODE>set</CODE> method for the matieres property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
-     *    getInscription().add(newItem);
+     *    getMatieres().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link Inscription }
+     * {@link Matiere }
      * 
      * 
      */
-    public List<Inscription> getInscription() {
-        if (inscription == null) {
-            inscription = new ArrayList<Inscription>();
+    public List<Matiere> getMatieres() {
+        if (matieres == null) {
+            matieres = new ArrayList<Matiere>();
         }
-        return this.inscription;
+        return this.matieres;
     }
 
 }

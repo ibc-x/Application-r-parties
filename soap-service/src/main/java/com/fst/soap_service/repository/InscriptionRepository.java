@@ -25,33 +25,37 @@ public class InscriptionRepository {
     Inscription inscription = new Inscription();
     inscription.setId(1);
     inscription.setIdEtudiant(1);
-    inscription.setDateInscription(DatatypeFactory.newInstance().newXMLGregorianCalendar(new GregorianCalendar(2024, 11, 2, 10, 30, 45)));
+    inscription.setDateInscription(DatatypeFactory.newInstance().newXMLGregorianCalendar(new GregorianCalendar(2023, 11, 2, 10, 30, 45)));
     inscription.setNiveau("Master");
     inscription.setStatus("Regulier");
+    inscription.setAnnee(2023);
     inscriptions.put(1, inscription);
     
     inscription = new Inscription();
     inscription.setId(2);
     inscription.setIdEtudiant(2);
-    inscription.setDateInscription(DatatypeFactory.newInstance().newXMLGregorianCalendar(new GregorianCalendar(2024, 11, 2, 10, 30, 45)));
+    inscription.setDateInscription(DatatypeFactory.newInstance().newXMLGregorianCalendar(new GregorianCalendar(2023, 12, 2, 10, 30, 45)));
     inscription.setNiveau("Master");
     inscription.setStatus("Boursier");
+    inscription.setAnnee(2023);
     inscriptions.put(2, inscription);
 
     inscription = new Inscription();
     inscription.setId(3);
     inscription.setIdEtudiant(3);
-    inscription.setDateInscription(DatatypeFactory.newInstance().newXMLGregorianCalendar(new GregorianCalendar(2024, 11, 2, 10, 30, 45)));
+    inscription.setDateInscription(DatatypeFactory.newInstance().newXMLGregorianCalendar(new GregorianCalendar(2023, 11, 2, 10, 2, 45)));
     inscription.setNiveau("Master");
     inscription.setStatus("Boursier");
+    inscription.setAnnee(2023);
     inscriptions.put(3, inscription);
 
     inscription = new Inscription();
     inscription.setId(4);
     inscription.setIdEtudiant(4);
-    inscription.setDateInscription(DatatypeFactory.newInstance().newXMLGregorianCalendar(new GregorianCalendar(2024, 11, 2, 10, 30, 45)));
+    inscription.setDateInscription(DatatypeFactory.newInstance().newXMLGregorianCalendar(new GregorianCalendar(2023, 11, 2, 10, 30, 45)));
     inscription.setNiveau("Master");
     inscription.setStatus("Boursier");
+    inscription.setAnnee(2023);
     inscriptions.put(2, inscription);
   }
 
@@ -62,5 +66,8 @@ public class InscriptionRepository {
 
   public List<Inscription> getAll() {
     return inscriptions.values().stream().toList();
+  }
+  public List<Inscription> getAllByEtudiant(Integer idEtudiant) {
+    return inscriptions.values().stream().filter((inscription) -> inscription.getIdEtudiant() == idEtudiant).toList();
   }
 }

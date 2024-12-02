@@ -5,9 +5,6 @@ import com.fst.xml.kalablo.EtudiantListResponse;
 import com.fst.xml.kalablo.EtudiantRequest;
 import com.fst.xml.kalablo.EtudiantResponse;
 
-import java.util.Arrays;
-import java.util.List;
-
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
 import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
 import org.springframework.ws.server.endpoint.annotation.RequestPayload;

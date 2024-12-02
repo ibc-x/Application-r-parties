@@ -10,7 +10,6 @@ package com.fst.xml.kalablo;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -25,7 +24,7 @@ import jakarta.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="Etudiant" type="{http://www.fst.com/xml/kalablo}Etudiant"/&gt;
+ *         &lt;element name="idEtudiant" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -36,36 +35,27 @@ import jakarta.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "etudiant"
+    "idEtudiant"
 })
-@XmlRootElement(name = "EtudiantResponse")
-public class EtudiantResponse {
+@XmlRootElement(name = "InscriptionEtudiantRequest")
+public class InscriptionEtudiantRequest {
 
-    @XmlElement(name = "Etudiant", required = true)
-    protected Etudiant etudiant;
+    protected int idEtudiant;
 
     /**
-     * Obtient la valeur de la propriété etudiant.
+     * Obtient la valeur de la propriété idEtudiant.
      * 
-     * @return
-     *     possible object is
-     *     {@link Etudiant }
-     *     
      */
-    public Etudiant getEtudiant() {
-        return etudiant;
+    public int getIdEtudiant() {
+        return idEtudiant;
     }
 
     /**
-     * Définit la valeur de la propriété etudiant.
+     * Définit la valeur de la propriété idEtudiant.
      * 
-     * @param value
-     *     allowed object is
-     *     {@link Etudiant }
-     *     
      */
-    public void setEtudiant(Etudiant value) {
-        this.etudiant = value;
+    public void setIdEtudiant(int value) {
+        this.idEtudiant = value;
     }
 
 }
